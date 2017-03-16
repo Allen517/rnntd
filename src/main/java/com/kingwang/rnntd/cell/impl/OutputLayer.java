@@ -100,10 +100,10 @@ public class OutputLayer extends Operator implements Cell, Serializable {
         
         if(AlgCons.tmDist.equalsIgnoreCase("exp")) {
         	w = initer.uniform(1, 1);
+        	this.hdw = new DoubleMatrix(w.rows, w.columns);
+        	this.hd2w = new DoubleMatrix(w.rows, w.columns);
         }
         
-        this.hdw = new DoubleMatrix(w.rows, w.columns);
-        this.hd2w = new DoubleMatrix(w.rows, w.columns);
     }
     
     public void active(int t, Map<String, DoubleMatrix> acts, double... params) {
@@ -123,7 +123,10 @@ public class OutputLayer extends Operator implements Cell, Serializable {
     	DoubleMatrix dWhd = new DoubleMatrix(Whd.rows, Whd.columns);
     	DoubleMatrix dbd = new DoubleMatrix(bd.rows, bd.columns);
     	
-    	DoubleMatrix dw = new DoubleMatrix(w.rows, w.columns);
+    	DoubleMatrix dw = null;
+    	if(AlgCons.tmDist.equalsIgnoreCase("exp")) {
+        	dw = new DoubleMatrix(w.rows, w.columns);
+    	}
     	
     	DoubleMatrix tmList = acts.get("tmList");
     	DoubleMatrix ndList = acts.get("ndList");
@@ -289,8 +292,10 @@ public class OutputLayer extends Operator implements Cell, Serializable {
     	writeMatrix(osw, Whd);
     	FileUtil.writeln(osw, "bd");
     	writeMatrix(osw, bd);
-    	FileUtil.writeln(osw, "w");
-    	writeMatrix(osw, w);
+    	if(AlgCons.tmDist.equalsIgnoreCase("exp")) {
+    		FileUtil.writeln(osw, "w");
+    		writeMatrix(osw, w);
+    	}
 	}
 
 	/* (non-Javadoc)

@@ -49,7 +49,7 @@ public class LSTMTest {
 	
 	@Before
 	public void setCell() {
-AlgCons.tmDist = "exp";
+		AlgCons.tmDist = "const";
 		
 		// set basic parameters
 		inDynSize = 10;

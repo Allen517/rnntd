@@ -1,4 +1,4 @@
-time_div:10
+time_div:100
 thread_num:4
 in_dyn_size:10
 in_fixed_size:136
@@ -12,35 +12,29 @@ epoch:100001
 is_cont_training:false 
 bias_init_val:.1
 node_size:165
-cas_file:/home/yqwang/workspace/data/memtracker/user-topics/memes-topics.0.train
+cas_file:data/memes-topics.train
 stop_count:50
 gamma:1
-crs_val_file:/home/yqwang/workspace/data/memtracker/user-topics/memes-topics.0.val
+crs_val_file:data/memes-topics.val
 train_strategy:adam
 sleep_sec:1.
 no_of_minibatch_values:256
 init_scale:1.
-time_dist:exp
+time_dist:const
 hidden_size:10
-Iter = 1, error = 195.5393800871841, time = 1.022s
-Iter = 2, error = 184.51189114364772, time = 1.008s
-Iter = 3, error = 175.91975348774804, time = 1.007s
-Iter = 4, error = 185.84365051256725, time = 1.012s
-Iter = 5, error = 179.70355591444974, time = 1.011s
-Iter = 6, error = 181.62268657807437, time = 1.009s
-Iter = 7, error = 181.96995301517745, time = 1.004s
-Iter = 8, error = 190.9382573820577, time = 1.007s
-Iter = 9, error = 189.25239534192667, time = 1.011s
-Iter = 10, error = 189.6830505876986, time = 1.008s
-The likelihood in Validation: 195.38270740729675
+Iter = 1, error = 185.50661171221495, time = 1.011s
+Iter = 2, error = 180.3308044602168, time = 1.01s
+Iter = 3, error = 172.92774904978884, time = 1.013s
+Iter = 4, error = 172.16582371452216, time = 1.009s
+Iter = 5, error = 178.76877021233864, time = 1.011s
+Iter = 6, error = 174.94149216867703, time = 1.009s
+Iter = 7, error = 174.65848461487437, time = 1.005s
+Iter = 8, error = 172.40786280446193, time = 1.01s
+Iter = 9, error = 182.46647553011724, time = 1.008s
+Iter = 10, error = 183.27583268036383, time = 1.011s
+The likelihood in Validation: 184.62956303483267
 The MRR of node prediction in Validation: 0.0
-Iter = 11, error = 188.44717383169262, time = 1.03s
-Iter = 12, error = 190.75583832875796, time = 1.014s
-Iter = 13, error = 177.68234167143567, time = 1.008s
-Iter = 14, error = 189.86485501907953, time = 1.007s
-Iter = 15, error = 187.90976871370586, time = 1.013s
-Iter = 16, error = 190.50688913863803, time = 1.013s
-Iter = 17, error = 187.40029851100394, time = 1.009s
-Iter = 18, error = 185.85149360007765, time = 1.01s
-Iter = 19, error = 186.1375416860349, time = 1.008s
-Iter = 20, error = 185.1140078581921, time = 1.012s
+Iter = 11, error = 183.69353515636126, time = 1.009s
+Iter = 12, error = 182.40513598453407, time = 1.009s
+Iter = 13, error = 181.8375323142131, time = 1.009s
+Iter = 14, error = 181.23106752446245, time = 1.012s

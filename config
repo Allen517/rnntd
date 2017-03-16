@@ -1,7 +1,7 @@
 #training set#
-cas_file=/home/yqwang/workspace/data/memtracker/user-topics/memes-topics.0.train
+cas_file=data/memes-topics.train
 #validation set#
-crs_val_file=/home/yqwang/workspace/data/memtracker/user-topics/memes-topics.0.val
+crs_val_file=data/memes-topics.val
 
 out_file=meme-user-topics.netrnn-gru.model
 
@@ -14,6 +14,7 @@ rnn_type=gru
 
 no_of_minibatch_values=256
 
+#adam/adagrad
 train_strategy=adam
 beta1=0.9 
 beta2=0.999
@@ -24,7 +25,8 @@ lr=.001
 init_scale=1.
 bias_init_val=.1
 gamma=1
-time_dist=exp
+#const/exp
+time_dist=const
 #maximum training epoches#
 epoch=100001
 #cycle for validation#
@@ -39,7 +41,7 @@ in_dyn_size=10
 hidden_size=10
 
 #it better tunes to larger than 10, if the results go wrong
-time_div=10
+time_div=100
 
 thread_num=4
 sleep_sec=1.
