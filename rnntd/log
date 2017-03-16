@@ -1,0 +1,30 @@
+time_div:10
+thread_num:4
+rep_file:memes-splited-syria-14.nodes2vec
+out_file:meme-user-topics.ctsrnn_exp_gru.model
+rnn_type:gru
+//lr_input:.5
+beta1:0.9
+lr:.001
+beta2:0.999
+validation_cycle:2
+epoch:50000
+bias_init_val:.1
+is_cont_training:false
+node_size:1614
+cas_file:/home/yqwang/workspace/java/rnn_data_proc/data/memes-splited-syria.thres14.train
+stop_count:5
+//lr:.5
+crs_val_file:/home/yqwang/workspace/java/rnn_data_proc/data/memes-splited-syria.thres14.val
+lr_input:.001
+train_strategy:adam
+representaion_dimemsion:100
+sleep_sec:1.
+init_scale:1.
+no_of_minibatch_values:256
+hidden_size:50
+tm_feat_size:2
+Iter = 1, error = 225.4724779690681, time = 14.064s
+Iter = 2, error = 216.82178032186826, time = 13.051s
+The likelihood in Validation: 223.53576937517235
+The MRR of node prediction in Validation: -0.005923645024543559
